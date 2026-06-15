@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOOK & PIM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <h1>FLOOK & PIM</h1>
+        <p class="invite-text">
+ด้วยความยินดีอย่างยิ่ง
+<br>
+ขอเรียนเชิญท่านร่วมเป็นเกียรติในงานมงคลสมรสของเรา
+</p>
+
+<p>18 มกราคม 2570</p>
+
+        <button id="openInvite">
+            เปิดคำเชิญ
+        </button>
+
+    </div>
+
+</section>
+
+<section id="content" class="hidden">
+
+    <section class="section">
+
+        <h2>นับถอยหลัง</h2>
+
+        <div class="countdown">
+
+            <div class="card">
+                <h3 id="days">0</h3>
+                <span>วัน</span>
+            </div>
+
+            <div class="card">
+                <h3 id="hours">0</h3>
+                <span>ชั่วโมง</span>
+            </div>
+
+            <div class="card">
+                <h3 id="minutes">0</h3>
+                <span>นาที</span>
+            </div>
+
+            <div class="card">
+                <h3 id="seconds">0</h3>
+                <span>วินาที</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>กำหนดการ</h2>
+
+        <ul class="schedule">
+            <li>16.30 - 17.00 น. แขกเริ่มเข้าสถานที่เดินเล่นถ่ายรูป</li>
+            <li>17.30 น . เปิดตัวบ่าว-สาว เริ่มพิธีสวมแหวน </li>
+            <li>18.00 น. สิ้นสุดพิธีโดยประมาณการ บ่าวสาวถ่ายรูปกับแขกร่วมงาน </li>
+            <li>18.10 น .  เปิดไลน์บุฟเฟ่ รับประทานอาหาร
+             ** พักเบรค** บ่าวสาวถ่ายรูป เดินทักทายแขก
+                        รับประทานอาหารร่วมกับแขก</li>
+            <li>19.00 น. แขกเริ่มอวยพรบ่าว สาว</li> 
+            <li>20.00 น. บ่าว สาว กล่าวคำขอบคุณแขกในงาน
+                         ต่อด้วย ;  ตัดเค้ก/ รินแชมเปญ</li>
+            <li>20.39 น. ส่งตัวบ่าวสาว **พักเบรคเปลี่ยนชุด**โหมด After party ❤️</li>
+            <li>22.00 น. จบงาน</li>
+   
+        </ul>
+
+    </section>
+
+    <section class="section">
+
+    <h2>สถานที่จัดงาน</h2>
+
+    <p>
+        Inlaya Resort จังหวัดราชบุรี
+    </p>
+
+    <iframe
+    src="https://www.google.com/maps/embed?pb=..."
+    width="100%"
+    height="450"
+    style="border:0;border-radius:20px;"
+    allowfullscreen=""
+    loading="lazy">
+    </iframe>
+
+    <br><br>
+
+    <a
+    href="https://maps.google.com/?q=Inlaya+Resort"
+    target="_blank">
+        เปิดใน Google Maps
+    </a>
+
+    <section class="section">
+
+    <h2>Our Memories</h2>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg">
+        <img src="images/photo2.jpg">
+        <img src="images/photo3.jpg">
+        <img src="images/photo4.jpg">
+
+    </div>
+
+</section>
+</section>
+
+    <section class="section">
+
+        <h2>RSVP</h2>
+
+        <form id="rsvpForm">
+
+            <input
+            id="name"
+            placeholder="ชื่อ-นามสกุล"
+            required>
+
+            <input
+            id="phone"
+            placeholder="เบอร์โทร">
+
+            <input
+            id="guests"
+            type="number"
+            placeholder="จำนวนผู้ร่วมงาน">
+
+            <select id="food">
+                <option>อาหารทั่วไป</option>
+                <option>มังสวิรัติ</option>
+                <option>ฮาลาล</option>
+            </select>
+
+            <button type="submit">
+                ยืนยันการเข้าร่วม
+            </button>
+
+        </form>
+
+    </section>
+
+</section>
+
+<script src="countdown.js"></script>
+<script src="rsvp.js"></script>
+
+<audio id="bgMusic" loop>
+    <source src="music/music1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+document
+.getElementById("openInvite")
+.addEventListener("click",()=>{
+
+document
+.getElementById("content")
+.classList.remove("hidden");
+
+document
+.getElementById("bgMusic").play();
+
+window.scrollTo({
+top:window.innerHeight,
+behavior:"smooth"
+});
+
+});
+
+</script>
+
+</body>
+</html>
